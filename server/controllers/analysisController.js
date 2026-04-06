@@ -3,11 +3,11 @@ import { cloudinary } from "../config/cloudinary.js";
 import fs from "fs";
 import reportModel from "../models/reportModel.js";
 
-// const genAI = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-// console.log("Google Gemeni ✅" , process.env.GEMINI_API_KEY);
-// console.log("Cloudinary name ✅" , process.env.CLOUDINARY_CLOUD_NAME);
-// console.log("Cloudinary API Key ✅" , process.env.CLOUDINARY_API_KEY);
-// console.log("Cloudinary API Secret ✅" , process.env.CLOUDINARY_API_SECRET);
+const genAI = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+console.log("Google Gemeni ✅" , process.env.GEMINI_API_KEY);
+console.log("Cloudinary name ✅" , process.env.CLOUDINARY_CLOUD_NAME);
+console.log("Cloudinary API Key ✅" , process.env.CLOUDINARY_API_KEY);
+console.log("Cloudinary API Secret ✅" , process.env.CLOUDINARY_API_SECRET);
 
 
 
