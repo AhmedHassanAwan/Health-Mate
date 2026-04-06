@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Outfit', sans-serif;
+    --font-domine: 'Domine', serif;
+}
+
+@layer base {
+    body {
+        @apply bg-white text-gray-800 text-sm antialiased font-sans;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+}
