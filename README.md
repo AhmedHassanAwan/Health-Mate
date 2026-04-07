@@ -84,3 +84,8 @@ HealthMate/
 ```
 
 ---
+
+
+## 🎯 Summary
+
+ ## HealthMate simplifies medical data by combining AI intelligence, bilingual accessibility, and secure data management into a single, user-friendly platform. ## 
