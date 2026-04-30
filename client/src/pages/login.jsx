@@ -47,7 +47,6 @@ export default function Login() {
                     setdisable(false);
                     navigate('/');
                 } else {
-                    // toast.error(data.message);
                      toast.error(data.message || "Login failed");
                     setdisable(false);
                 }
