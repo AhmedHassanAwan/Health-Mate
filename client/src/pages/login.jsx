@@ -26,11 +26,13 @@ export default function Login() {
                 const { data } = await axios.post(backendUrl + '/api/auth/register', { name, email, password });
 
                 if (data.success) {
+                     toast.success("Account created successfully ");
                     setState("Login")
                     getUserData();
                     setdisable(false);
                 } else {
                     console.log(error);
+                    toast.error(data.message || "Signup failed");
 
                     // toast.error(data.message);
                     setdisable(false);
@@ -39,17 +41,20 @@ export default function Login() {
                 const { data } = await axios.post(backendUrl + '/api/auth/login', { email, password });
 
                 if (data.success) {
+                     toast.success("Login successful");
                     setIsLoggedIn(true);
                     getUserData();
                     setdisable(false);
                     navigate('/');
                 } else {
-                    toast.error(data.message);
+                    // toast.error(data.message);
+                     toast.error(data.message || "Login failed");
                     setdisable(false);
                 }
             }
         } catch (error) {
-            toast.error(error.message);
+            // toast.error(error.message);
+             toast.error(error.response?.data?.message || error.message || "Server error");
         }
     }
 

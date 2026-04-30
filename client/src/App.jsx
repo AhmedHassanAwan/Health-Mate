@@ -16,7 +16,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 export default function App() {
     return (
         <>
-            <Toaster />
+            <Toaster position="top-center" />
             <Routes>
                 <Route element={<Layout />}>
                     <Route path="/" element={<Home />} />
