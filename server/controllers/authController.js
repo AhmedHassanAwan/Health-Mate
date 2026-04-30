@@ -31,7 +31,7 @@ export const register = async (req, res) => {
 
         //sending welcome email
         const mailOptions = {
-            from: process.env.SENDER_EMAIL,
+            from: ` "Health Mate" <${process.env.SENDER_EMAIL}>`,
             to: email,
             subject: 'Welcome by Health Mate',
             html: WELCOME_TEMPLATE.replace("{{name}}", name).replace("{{email}}", email)
@@ -140,7 +140,7 @@ export const sendVerifyOtp = async (req, res) => {
 
         const mailOption = {
 
-            from: process.env.SENDER_EMAIL,
+            from: ` "Health Mate" <${process.env.SENDER_EMAIL}>`,
             to: user.email,
             subject: 'Account Verification OTP',
             html: EMAIL_VERIFY_TEMPLATE.replace("{{otp}}", otp)
@@ -255,7 +255,7 @@ export const sendResetOtp = async (req, res) => {
 
         const mailOption = {
 
-            from: process.env.SENDER_EMAIL,
+            from: ` "Health Mate" <${process.env.SENDER_EMAIL}>`,
             to: user.email,
             subject: 'Password Reset OTP',
             html: PASSWORD_RESET_TEMPLATE.replace("{{otp}}", otp)
